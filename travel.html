@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Travel photographs and places visited by Owen Visser.">
+  <meta name="author" content="Owen Visser">
+  <title>Travel & Photos | Owen Visser</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-background" aria-hidden="true"></div>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="nav-inner">
+        <a class="wordmark" href="index.html">
+          <span class="wordmark-name">Owen Visser</span>
+          <span class="wordmark-subtitle">Postdoctoral Associate · University of Florida, USA</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav"
+          aria-expanded="false"><span></span><span></span><span></span></button>
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation"><a href="index.html">Home</a><a
+            href="academic.html">Academic</a><a href="workhistory.html">Work History</a><a href="software.html">Software & Tutorials</a><a href="travel.html"
+            aria-current="page">Travel & Photos</a></nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="section travel-section">
+        <div class="section-title">
+          <h2>Photo Journal</h2>
+          <p>More photographs will be added here over time.</p>
+        </div>
+        <figure class="travel-photo"><img src="img/Landscape.jpg"
+            alt="View across Yosemite Valley, with Half Dome and granite cliffs beneath a blue sky" width="2048"
+            height="1066" loading="lazy">
+          <figcaption>Yosemite National Park, California</figcaption>
+        </figure>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <span>2026</span><a href="mailto:owviss@gmail.com">owviss@gmail.com</a>
+    </footer>
+  </div>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('.site-nav');
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      navigation.classList.toggle('open', !isOpen);
+    });
+    navigation.addEventListener('click', event => {
+      if (event.target.closest('a')) {
+        navigation.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+
+</html>

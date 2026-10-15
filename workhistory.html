@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Academic research, publications, professional experience and service by Owen Visser.">
+    <meta name="author" content="Owen Visser">
+    <title>Academic | Owen Visser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/site.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="site-background" aria-hidden="true"></div>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="nav-inner">
+                <a class="wordmark" href="index.html">
+                    <span class="wordmark-name">Owen Visser</span>
+                    <span class="wordmark-subtitle">Postdoctoral Associate · University of Florida, USA</span>
+                </a>
+                <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="site-nav"
+                    aria-expanded="false"><span></span><span></span><span></span></button>
+                <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="academic.html">Academic</a>
+                    <a href="workhistory.html" aria-current="page">Work History</a>
+                    <a href="software.html">Software & Tutorials</a>
+                    <a href="travel.html">Travel & Photos</a>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <section class="section page-section" id="software" aria-labelledby="heading-software">
+                <div class="section-title">
+                    <h2 id="heading-software">Current Roles</h2>
+                </div>
+                <div class="section-content">
+                    <article class="site-card software-feature">
+                        <p class="item-meta">Sep. 2026 – present</p>
+                        <h3>Web Development &amp; Data Visualization Contractor (Part-Time)</h3>
+                        <i>International Society for Computational Biology (ISCB)</i>
+                        <p>Developing statistical visualizations, tables, and JavaScript reporting
+                            interfaces integrated with a Slim 4 (PHP) web application.</p>
+                    </article>
+                    <article class="site-card software-feature">
+                        <p class="item-meta">Aug. 2026 – present</p>
+                        <h3>Postdoctoral Associate</h3>
+                        <i>Department of Biostatistics, University of Florida · Supervisor: Dr. Arkaprava Roy</i>
+                        <p>Developing graph convolutional neural networks and generative models for
+                            irregular longitudinal data, with GPU-accelerated Python implementations and
+                            model comparisons.</p>
+                    </article>
+                </div>
+            </section>
+            <section class="section page-section" id="experience" aria-labelledby="heading-experience">
+                <div class="section-title">
+                    <h2 id="heading-experience">Previous Roles</h2>
+                </div>
+                <div class="section-content">
+                    <article class="site-card software-feature">
+                        <p class="item-meta">2025 – 2026</p>
+                        <h3>Graduate Student Mentor</h3>
+                        <i>Department of Biostatistics, University of Florida</i>
+                        <p>Mentored an M.S. capstone student in statistical analysis, programming,
+                            consulting, and technical communication.</p>
+                    </article>
+                    <article class="site-card software-feature">
+                        <p class="item-meta">2023 – 2026</p>
+                        <h3>Graduate Research Assistant</h3>
+                        <i>Department of Biostatistics, University of Florida</i>
+                        <p>Developed estimating-equation methods for clustered outcomes, single-cell
+                            clustering validation, antimicrobial resistance prediction workflows, and
+                            computational analyses of oral-health data.</p>
+                    </article>
+                    <article class="site-card software-feature">
+                        <p class="item-meta">2022 – 2023</p>
+                        <h3>Graduate Teaching Assistant</h3>
+                        <i>Department of Biostatistics, University of Florida</i>
+                        <p>Developed instructional examples and supplemental notes for graduate
+                            biostatistics coursework.</p>
+                    </article>
+                    <article class="site-card software-feature">
+                        <p class="item-meta">2021 – 2022</p>
+                        <h3>Visiting Instructor</h3>
+                        <i>Department of Mathematics &amp; Statistics, University of North Florida</i>
+                        <p>Taught College Algebra, College Algebra with Recitation, and Introductory
+                            Statistics in in-person and online formats.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer class="site-footer">
+            <span>2026</span><a href="mailto:owviss@gmail.com">owviss@gmail.com</a>
+        </footer>
+
+    </div>
+    <script>
+        const menuButton = document.querySelector('.menu-toggle');
+        const navigation = document.querySelector('.site-nav');
+        menuButton.addEventListener('click', () => {
+            const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', String(!isOpen));
+            navigation.classList.toggle('open', !isOpen);
+        });
+        navigation.addEventListener('click', event => {
+            if (event.target.closest('a')) {
+                navigation.classList.remove('open');
+                menuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+</body>
+
+</html>
