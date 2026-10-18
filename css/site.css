@@ -158,6 +158,9 @@ h3 {
 p {
   margin: 0px 0 12px;
 }
+.justified-text {
+            text-align: justify;
+        }
 i {
   display: block;
   font-style: italic;
